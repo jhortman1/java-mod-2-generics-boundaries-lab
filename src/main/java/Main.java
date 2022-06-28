@@ -1,5 +1,15 @@
+import java.util.List;
+
 public class Main {
     // implement the public averageList method here
+    public static Double averageList (List <? extends Number> numberList)
+    {
+        double avg = 0.0;
+        for (Number number : numberList) {
+            avg += number.doubleValue();            
+        }
+        return avg/numberList.size();
+    }
     
     public static void main(String[] args) {
         List<Integer> intList = List.of(1, 2, 3, 4, 5);
